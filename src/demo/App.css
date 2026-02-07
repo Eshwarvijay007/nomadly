@@ -1,0 +1,52 @@
+@import '../styles/breakpoints.css';
+
+.app {
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+.app-main {
+  padding: var(--spacing-md);
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.app-title {
+  margin: 0 0 var(--spacing-lg) 0;
+  font-size: var(--font-size-2xl);
+  color: #1f2a37;
+  text-align: center;
+}
+
+.upload-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.status-message {
+  margin: var(--spacing-md) 0 0 0;
+  color: #1f2a37;
+  font-size: var(--font-size-base);
+}
+
+.error-message {
+  margin: var(--spacing-md) 0 0 0;
+  color: #b42318;
+  font-size: var(--font-size-base);
+}
+
+.form-section {
+  margin-top: var(--spacing-lg);
+}
+
+.success-message {
+  margin-top: var(--spacing-md);
+  color: #067647;
+  font-size: var(--font-size-base);
+}
+
+@media (min-width: 768px) {
+  .app-main {
+    padding: var(--spacing-xl);
+  }
+}

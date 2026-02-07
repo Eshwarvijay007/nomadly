@@ -1,0 +1,13 @@
+SCAN BATCH ID: OCR-2026-02-07
+confidence map: [0.41,0.56,0.88]
+-----
+Place Name: Golden Gate Bridge
+Location: San Francisco, CA
+-----
+line with junk ::: ### @@ !! ???
+1. Burj Khalifa -> Dubai, UAE
+2. Angkor Wat -> Siem Reap, Cambodia
+3. Machu Picchu -> Cusco Region, Peru
+-----
+PL4CE maybe: N0T this line
+L0C maybe: N0T this one either

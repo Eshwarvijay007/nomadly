@@ -1,0 +1,6 @@
+monument_title,loc_hint,geo_zone,random_blob
+"Eiffel Tower","Paris","EU-WEST","v=1|noise=abc|score=91"
+"Taj Mahal","Agra","APAC-SOUTH","v=2|noise=zzz|score=87"
+"Sydney Opera House","Sydney","APAC-ANZ","v=3|noise=K9K9|score=95"
+"Chichen Itza","Yucatan","LATAM","v=4|noise=----|score=83"
+"Christ the Redeemer","Rio de Janeiro","LATAM","v=5|noise=....|score=89"

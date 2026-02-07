@@ -1,0 +1,6 @@
+place_name,location,country,notes
+"Eiffel Tower","Paris","France","valid row"
+"Statue of Liberty","New York City","USA","missing closing quote
+"Taj Mahal",Agra,India,valid-ish row
+Unescaped,Comma,Here,"row,with,extra,commas"
+"Colosseum","Rome","Italy"

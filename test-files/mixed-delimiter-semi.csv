@@ -1,0 +1,5 @@
+place-name;location-area;notes;signal
+"Colosseum";"Rome, Italy";"ticket-line:long";"0.72"
+"Burj Khalifa";"Dubai, UAE";"height-check";"0.91"
+"CN Tower";"Toronto, Canada";"weather=rain";"0.63"
+"";"Unknown";"missing place row";"0.12"
