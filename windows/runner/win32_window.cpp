@@ -100,8 +100,16 @@ const wchar_t* WindowClassRegistrar::GetWindowClass() {
     window_class.hbrBackground = 0;
     window_class.lpszMenuName = nullptr;
     window_class.lpfnWndProc = Win32Window::WndProc;
-    RegisterClass(&window_class);
-    class_registered_ = true;
+    if (RegisterClass(&window_class) != 0) {
+      class_registered_ = true;
+    } else {
+      DWORD error = GetLastError();
+      OutputDebugString(L"Failed to register window class. Error: ");
+      wchar_t error_msg[64];
+      _snwprintf_s(error_msg, sizeof(error_msg) / sizeof(wchar_t), L"%lu\n", error);
+      OutputDebugString(error_msg);
+      return nullptr;
+    }
   }
   return kWindowClassName;
 }
@@ -208,7 +216,7 @@ Win32Window::MessageHandler(HWND hwnd,
     }
 
     case WM_ACTIVATE:
-      if (child_content_ != nullptr) {
+      if (child_content_ != nullptr && LOWORD(wparam) != WA_INACTIVE) {
         SetFocus(child_content_);
       }
       return 0;

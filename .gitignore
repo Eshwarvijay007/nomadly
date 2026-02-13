@@ -4,10 +4,21 @@ package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+pubspec.lock
+*.iml
+
 # Build output
 dist/
 build/
 *.tsbuildinfo
+/build/
 
 # Testing
 coverage/
