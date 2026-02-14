@@ -14,6 +14,8 @@
 
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:nomadly/app/router.dart';
 
 // ---------------------------------------------------------------------------
 // COLORS — extracted from nomadly's light mobile design
@@ -601,49 +603,52 @@ class _SearchShowcaseSection extends StatelessWidget {
                 ),
               ),
               // Search bar — white bg, border, pill shape
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12),
-                child: Container(
-                  height: 52,
-                  decoration: BoxDecoration(
-                    color: kBg,
-                    borderRadius: BorderRadius.circular(100),
-                    border: Border.all(color: kGrey75, width: 1),
-                  ),
-                  padding: const EdgeInsets.only(left: 20, right: 4),
-                  child: Row(
-                    children: [
-                      const Expanded(
-                        child: Text(
-                          'REFLECTIONS ON THE WATER',
-                          style: TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w400,
-                            color: kText,
-                            letterSpacing: 0.6,
-                            fontFamily: 'Courier',
+              GestureDetector(
+                onTap: () => context.push(RoutePaths.explore),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                  child: Container(
+                    height: 52,
+                    decoration: BoxDecoration(
+                      color: kBg,
+                      borderRadius: BorderRadius.circular(100),
+                      border: Border.all(color: kGrey75, width: 1),
+                    ),
+                    padding: const EdgeInsets.only(left: 20, right: 4),
+                    child: Row(
+                      children: [
+                        const Expanded(
+                          child: Text(
+                            'REFLECTIONS ON THE WATER',
+                            style: TextStyle(
+                              fontSize: 10,
+                              fontWeight: FontWeight.w400,
+                              color: kText,
+                              letterSpacing: 0.6,
+                              fontFamily: 'Courier',
+                            ),
                           ),
                         ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-                        decoration: BoxDecoration(
-                          color: kBg,
-                          borderRadius: BorderRadius.circular(100),
-                          border: Border.all(color: kGrey75, width: 1),
-                        ),
-                        child: const Text(
-                          'SEARCH',
-                          style: TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w400,
-                            color: kText,
-                            letterSpacing: 0.6,
-                            fontFamily: 'Courier',
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                          decoration: BoxDecoration(
+                            color: kBg,
+                            borderRadius: BorderRadius.circular(100),
+                            border: Border.all(color: kGrey75, width: 1),
+                          ),
+                          child: const Text(
+                            'SEARCH',
+                            style: TextStyle(
+                              fontSize: 10,
+                              fontWeight: FontWeight.w400,
+                              color: kText,
+                              letterSpacing: 0.6,
+                              fontFamily: 'Courier',
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
